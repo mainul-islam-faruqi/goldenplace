@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import React from 'react'
 
-const HomeView = () => {
+const HomeView: React.FC = () => {
   return (
     <>
       <Header />

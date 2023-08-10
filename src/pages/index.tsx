@@ -1,13 +1,18 @@
-import React from 'react'
-import MainLayout from '@/components/Layout/Main'
 import HomeView from '@/views/home'
-
-const Homepage = () => {
+import type { ReactElement } from 'react'
+import MainLayout from '@/components/Layout/Main'
+import type { NextPageWithLayout } from './_app'
+ 
+const Page: NextPageWithLayout = () => {
+  return <HomeView />
+}
+ 
+Page.getLayout = function getLayout(page: ReactElement) {
   return (
     <MainLayout>
-      <HomeView />
+      {page}
     </MainLayout>
   )
 }
-
-export default Homepage
+ 
+export default Page
