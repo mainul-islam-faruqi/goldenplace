@@ -56,6 +56,7 @@ const MenuItems = () => {
         </div>
         <div
           // zIndex="dropdown"
+          className="flex items-center"
         >
           <NextLink href="/rewards" passHref>
             <div
