@@ -1,5 +1,6 @@
-import React from "react";
-import NextLink from "next/link";
+import React from 'react';
+import NextLink from 'next/link';
+import RainbowText from '@/components/RainbowText';
 // import {
 //   Flex,
 //   FlexProps,
@@ -20,7 +21,7 @@ import NextLink from "next/link";
 //   MenuItem,
 // } from "@chakra-ui/react";
 // import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 // import {
 //   // Badge,
 //   // ChevronDown,
@@ -41,41 +42,22 @@ import { useRouter } from "next/router";
 const MenuItems = () => {
   // const { t } = useTranslation();
   const { pathname } = useRouter();
-  const isRewardActive = pathname.startsWith("/rewards");
+  const isRewardActive = pathname.startsWith('/rewards');
   return (
     <div>
       {/* <DesktopNextLink href="/explore">{t("Explore")}</DesktopNextLink>
       <DesktopNextLink href="/collections">{t("Collections")}</DesktopNextLink> */}
-      <div >
-        <div
-          className="flex items-center px-4 h-12 border-b-2 whitespace-nowrap text-text-02 hover:bg-ui-01"  
-        >
-          {/* <RainbowText as="span" animate>
-            {t("Rewards")}
-          </RainbowText> */}
-        </div>
-        <div
-          // zIndex="dropdown"
-          className="flex items-center"
-        >
+      <div>
+        <div className="flex items-center px-4 h-12 border-b-2 whitespace-nowrap text-text-02 hover:bg-ui-01">
           <NextLink href="/rewards" passHref>
-            <div
-              // as="a"
-            >
-              {/* {t("Staking")} */}
-              staking
-            </div>
+            <div>Collections</div>
           </NextLink>
           <NextLink href="/rewards/trading" passHref>
-            <div
-              // as="a" display="flex" justifyContent="space-between"
-            >
-              {/* {t("Listing & Trading")} */}
-              Trading
-              {/* <Badge textTransform="uppercase" bg="support-error-inverse" color="white">
-                {t("New")}
-              </Badge> */}
-            </div>
+            <div>Win</div>
+          </NextLink>
+
+          <NextLink href="/rewards" passHref>
+            <RainbowText>Rewards</RainbowText>
           </NextLink>
         </div>
       </div>

@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 export interface LayoutProps {
-  children?: any
+  children?: any;
 }
 
-const MainLayout: React.FC<LayoutProps> = ({children}) => {
+const MainLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
