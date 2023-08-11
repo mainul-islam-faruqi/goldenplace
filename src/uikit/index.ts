@@ -46,8 +46,8 @@
 // import InformationFilledIcon from "./Icons/components/InformationFilled"
 // import InstagramIcon from "./Icons/components/Instagram"
 // import LaunchOpenInNewIcon from "./Icons/components/LaunchOpenInNew"
-// import LightIcon from "./Icons/components/Light"
-// import LightFilledIcon from "./Icons/components/LightFilled"
+import LightIcon from "./Icons/components/Light"
+import LightFilledIcon from "./Icons/components/LightFilled"
 // import ListIcon from "./Icons/components/List"
 // import LogoIcon from "./Icons/components/Logo"
 // import LogoLightIcon from "./Icons/components/LogoLight"
@@ -120,7 +120,9 @@ export {
 //     ChevronRightIcon, ChevronUpIcon, ClockIcon, CloseIcon, CoinbaseIcon, CoinbaseLightIcon, CollectionIcon,
 //     CompassIcon, CopyFileIcon, DeleteIcon, DiamondIcon, DiscordIcon, DoubleArrowIcon, DownloadIcon, ErrorIcon,
 //     ErrorFilledIcon, EthIcon, FilterIcon, FormattingIcon, GiftIcon, GlobeIcon, HamburgerIcon, HelpIcon, InformationFilledIcon,
-//     InstagramIcon, LaunchOpenInNewIcon, LightIcon, LightFilledIcon, ListIcon, LogoIcon, LogoLightIcon, LogoMonoIcon,
+  //     InstagramIcon, LaunchOpenInNewIcon, 
+  LightIcon, LightFilledIcon,
+  //ListIcon, LogoIcon, LogoLightIcon, LogoMonoIcon,
 //     LogoPolygonIcon, LogoRoundIcon, LooksIcon, EthHalfIcon, EtherscanIcon, InformationIcon, ArrowUpLeftIcon,
 //     MailIcon, ManifoldCircleIcon, MaximizeIcon, MenuHorizontalIcon, MetaMaskIcon, MinimizeIcon, MintIcon, MisuseAltIcon,
 //     MultipleIcon, OfferIcon, OpenSeaIcon, PersonDissatisfiedIcon, PlayFilledAltIcon, RaritySniperIcon, ResetIcon,
