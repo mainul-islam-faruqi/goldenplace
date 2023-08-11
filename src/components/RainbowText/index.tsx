@@ -3,9 +3,10 @@ import './style.scss';
 
 interface RainbowTextProps {
   children: string;
+  className: string;
 }
 
-const RainbowText: React.FC<RainbowTextProps> = ({ children }) => {
+const RainbowText: React.FC<RainbowTextProps> = ({ children, className }) => {
   // Rainbow colors
   const colors = [
     '#FF0000',
@@ -17,18 +18,18 @@ const RainbowText: React.FC<RainbowTextProps> = ({ children }) => {
     '#8B00FF',
   ];
 
-  // Split the text into individual characters
-  const characters = children.split('');
+  // // Split the text into individual characters
+  // const characters = children.split('');
 
-  // Apply rainbow colors to each character
-  const rainbowText = characters.map((char, index) => (
-    <span key={index} style={{ color: colors[index % colors.length] }}>
-      {char}
-    </span>
-  ));
+  // // Apply rainbow colors to each character
+  // const rainbowText = characters.map((char, index) => (
+  //   <span key={index} style={{ color: colors[index % colors.length] }}>
+  //     {char}
+  //   </span>
+  // ));
 
   return (
-    <div className="rainbow-text-container">
+    <div className={`rainbow-text-container ${className}`}  >
       <div className="rainbow-text-animation">
         {children.split('').map((char, index) => (
           <span key={index}>{char}</span>

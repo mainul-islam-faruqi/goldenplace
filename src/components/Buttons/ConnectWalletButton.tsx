@@ -77,7 +77,7 @@ export const ConnectWalletIconButton = ({ colorScheme, ...props }: ConnectWallet
         {...props}
       >
         {/* {isUnsupportedNetwork ? <WarningFilledIcon /> : <WalletIcon />} */}
-         <WarningFilledIcon /> 
+         <WalletIcon width={24} height={24} /> 
       </IconButton>
       {/* <ConnectWalletModal isOpen={isOpen} onClose={onClose} /> */}
     </>
