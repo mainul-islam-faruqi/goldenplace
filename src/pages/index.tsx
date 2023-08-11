@@ -1,18 +1,14 @@
-import HomeView from '@/views/home'
-import type { ReactElement } from 'react'
-import MainLayout from '@/components/Layout/Main'
-import type { NextPageWithLayout } from './_app'
- 
+import HomeView from '@/views/home';
+import type { ReactElement } from 'react';
+import MainLayout from '@/components/Layout/Main';
+import type { NextPageWithLayout } from './_app';
+
 const Page: NextPageWithLayout = () => {
-  return <HomeView />
-}
- 
+  return <HomeView />;
+};
+
 Page.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <MainLayout>
-      {page}
-    </MainLayout>
-  )
-}
- 
-export default Page
+  return <MainLayout>{page}</MainLayout>;
+};
+
+export default Page;

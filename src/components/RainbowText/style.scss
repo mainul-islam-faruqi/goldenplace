@@ -1,0 +1,41 @@
+/* style.scss */
+
+/* Container for the rainbow text animation */
+.rainbow-text-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  top: 3px;
+}
+
+/* Animation */
+@keyframes rainbow-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Rainbow text animation */
+.rainbow-text-animation {
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    #ff1100,
+    #ff6200,
+    #ffb302,
+    #49CD7A,
+    #4589FF,
+    #ae00ff,
+    #FF7EB6,
+    #ff1100,
+  );
+  // background: conic-gradient(from 90deg at 50% 51.52%, #4589FF 0deg, #FF7EB6 141.23deg, #F1C21B 231.23deg, #49CD7A 287.48deg, #4589FF 360deg);
+  background-size: 1500% 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: rainbow-slide 9s linear infinite; /* Adjust the duration as needed */
+}
