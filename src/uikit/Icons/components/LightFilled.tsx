@@ -1,4 +1,4 @@
-import { Icon, IconProps } from "../Icon";
+import { Icon, IconProps } from '../Icon';
 
 const LightFilled = (props: IconProps) => (
   <Icon viewBox="0 0 24 24" {...props}>

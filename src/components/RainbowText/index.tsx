@@ -29,7 +29,7 @@ const RainbowText: React.FC<RainbowTextProps> = ({ children, className }) => {
   // ));
 
   return (
-    <div className={`rainbow-text-container ${className}`}  >
+    <div className={`rainbow-text-container ${className}`}>
       <div className="rainbow-text-animation">
         {children.split('').map((char, index) => (
           <span key={index}>{char}</span>

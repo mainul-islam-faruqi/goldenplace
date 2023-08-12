@@ -3,17 +3,20 @@ import MenuItem from './MenuItem';
 import Image from 'next/image';
 import SearchInput from '../Input/SearchInput';
 // import { useWeb3React } from "@web3-react/core";
-import { Flex, Box, FlexProps, Stack, Menu, MenuProps } from "@chakra-ui/react";
+import { Flex, Box, FlexProps, Stack, Menu, MenuProps } from '@chakra-ui/react';
 
 // import { navHeightResponsive } from "uikit/theme/global";
-import { ConnectWalletIconButton, ConnectWalletButton } from "@/components/Buttons/ConnectWalletButton";
+import {
+  ConnectWalletIconButton,
+  ConnectWalletButton,
+} from '@/components/Buttons/ConnectWalletButton';
 // import { LanguageSwitcherButtons } from "components/Buttons/LanguageSwitherButton/LanguageSwitcherButton";
 // import Logo from "./Logo";
-import UserMenu from "./UserMenu";
+import UserMenu from './UserMenu';
 // import { MobileDrawer, LinkList } from "./NavLinks";
 // import { DesktopSearchButton, MobileSearchButton } from "./SearchButton";
 // import { useTranslation } from "next-i18next";
-import { ColorModeButton } from "@/components/Buttons/ColorModeButton";
+import { ColorModeButton } from '@/components/Buttons/ColorModeButton';
 
 // export type NavProps = FlexProps;
 
@@ -22,7 +25,7 @@ const showOnDesktopProps = { base: 'none', md: 'block' };
 
 const Nav: React.FC = () => {
   // const { account } = useWeb3React();
-  const account = ""
+  const account = '';
   // const { t } = useTranslation();
   const [searchText, setSearchText] = useState('');
 
@@ -48,14 +51,12 @@ const Nav: React.FC = () => {
       </div>
 
       <div className="w-32 px-4 mr-4 flex justify-end">
-      <ColorModeButton />
+        <ColorModeButton />
       </div>
 
       <Stack direction="row" spacing={4}>
         <Stack direction="row" spacing={0}>
-          <Box>
-            
-          </Box>
+          <Box></Box>
 
           {/* <Box display={showOnDesktopProps}>
             <LanguageSwitcherButtons variant="ghost" colorScheme="gray" />
@@ -68,7 +69,7 @@ const Nav: React.FC = () => {
           <UserMenu account={account} />
         ) : (
           <>
-            <Box display={{ base: "block", lg: "none" }} px={4}>
+            <Box display={{ base: 'block', lg: 'none' }} px={4}>
               <ConnectWalletIconButton />
             </Box>
             {/* <Box display={{ base: "none", lg: "block" }}>
@@ -78,7 +79,7 @@ const Nav: React.FC = () => {
         )}
         <Box display={showOnMobileProps} ml={3} px={4}>
           {/* <MobileDrawer /> */}
-         ...
+          ...
         </Box>
       </Stack>
     </nav>

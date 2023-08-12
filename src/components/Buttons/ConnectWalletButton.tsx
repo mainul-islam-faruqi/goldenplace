@@ -5,19 +5,18 @@
 // import { useIsSupportedNetwork } from "hooks/useIsSupportedNetwork";
 // import { ConnectWalletModal } from "../Modals/ConnectWalletModal/ConnectWalletModal";
 
-
-
-import React from "react";
-import { useDisclosure, IconButton, IconButtonProps } from "@chakra-ui/react";
+import React from 'react';
+import { useDisclosure, IconButton, IconButtonProps } from '@chakra-ui/react';
 // import { useTranslation } from "react-i18next";
 // import { Button, ButtonProps, WarningFilledIcon, WalletIcon } from "uikit";
-import { Button, ButtonProps, WarningFilledIcon, WalletIcon } from "@/uikit";
+import { Button, ButtonProps, WarningFilledIcon, WalletIcon } from '@/uikit';
 // import { useIsSupportedNetwork } from "hooks/useIsSupportedNetwork";
 // import { ConnectWalletModal } from "../Modals/ConnectWalletModal/ConnectWalletModal";
 
-
-
-export type ConnectWalletButtonProps = Omit<ButtonProps, "onClick" | "disabled">;
+export type ConnectWalletButtonProps = Omit<
+  ButtonProps,
+  'onClick' | 'disabled'
+>;
 
 export const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
   colorScheme,
@@ -37,7 +36,7 @@ export const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
     }
 
     // return isUnsupportedNetwork ? t("Network") : t("Connect Wallet");
-    return "Connect Wallet"
+    return 'Connect Wallet';
   };
 
   return (
@@ -46,7 +45,7 @@ export const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
         colorScheme={colorScheme}
         onClick={onOpen}
         // leftIcon={isUnsupportedNetwork ? <WarningFilledIcon /> : leftIcon}
-        leftIcon={<WarningFilledIcon /> }
+        leftIcon={<WarningFilledIcon />}
         data-id="connect-wallet-button"
         // title={isUnsupportedNetwork ? t("Unsupported Network") : title}
         {...props}
@@ -58,9 +57,15 @@ export const ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
   );
 };
 
-export type ConnectWalletIconButtonProps = Omit<IconButtonProps, "onClick" | "disabled" | "aria-label">;
+export type ConnectWalletIconButtonProps = Omit<
+  IconButtonProps,
+  'onClick' | 'disabled' | 'aria-label'
+>;
 
-export const ConnectWalletIconButton = ({ colorScheme, ...props }: ConnectWalletIconButtonProps) => {
+export const ConnectWalletIconButton = ({
+  colorScheme,
+  ...props
+}: ConnectWalletIconButtonProps) => {
   // const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const isUnsupportedNetwork = useIsSupportedNetwork();
@@ -77,7 +82,7 @@ export const ConnectWalletIconButton = ({ colorScheme, ...props }: ConnectWallet
         {...props}
       >
         {/* {isUnsupportedNetwork ? <WarningFilledIcon /> : <WalletIcon />} */}
-         <WalletIcon width={24} height={24} /> 
+        <WalletIcon boxSize={20} />
       </IconButton>
       {/* <ConnectWalletModal isOpen={isOpen} onClose={onClose} /> */}
     </>
