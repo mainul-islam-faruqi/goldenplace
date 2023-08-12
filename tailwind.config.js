@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/views/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -12,6 +13,33 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      
+    },
+
+    colors: {
+      'title': '#251F04',
+      'lightBg': '#F8F4EE',
+      body: '#CACCCD',
+      deepBlue: '#162435',
+      brightBlue: '#2E5CFF',
+      darkGray: '#34485B',
+      charcoal: '#505053',
+      fireRed: '#FF0303',
+
+      // Legacy
+      
+      dimGray: '#B8B6CB',
+      pink: '#ED00C9',
+      purple: '#BD00ED',
+      left: '#1D023B',
+      right: '#17023E',
+      green: '#26fffe',
+      blue: '#0000AF',
+      success: '#55a361',
+      error: '#cf3a41',
+      warn: '#edb831',
+      info: '#006cff',
+      placeholder: '#757384',
     },
   },
   plugins: [],

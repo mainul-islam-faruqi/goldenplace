@@ -20,14 +20,14 @@ import { ColorModeButton } from "@/components/Buttons/ColorModeButton";
 const showOnMobileProps = { base: 'block', md: 'none' };
 const showOnDesktopProps = { base: 'none', md: 'block' };
 
-const Header: React.FC = () => {
+const Nav: React.FC = () => {
   // const { account } = useWeb3React();
   const account = ""
   // const { t } = useTranslation();
   const [searchText, setSearchText] = useState('');
 
   return (
-    <div className="flex items-center fixed top-0 left-0 w-full h-20 max-w-full sticky z-10 px-8 justify-between">
+    <nav className="flex items-center fixed top-0 left-0 w-full h-20 max-w-full sticky z-10 px-8 justify-between">
       <Image src="/goldenplace_logo.png" alt="Logo" width="200" height="33" />
       {/* <Logo mx={4} /> */}
 
@@ -81,8 +81,8 @@ const Header: React.FC = () => {
          ...
         </Box>
       </Stack>
-    </div>
+    </nav>
   );
 };
 
-export default Header;
+export default Nav;

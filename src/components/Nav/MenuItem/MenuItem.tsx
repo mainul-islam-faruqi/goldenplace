@@ -50,14 +50,14 @@ const MenuItems = () => {
       <div>
         <div className="flex items-center h-12 whitespace-nowrap text-text-02 hover:bg-ui-01">
           <NextLink href="/rewards" passHref>
-            <div className='px-4' >Collections</div>
+            <div className='px-4 py-3 mx-1 text-title font-medium hover:bg-lightBg rounded' >Collections</div>
           </NextLink>
           <NextLink href="/rewards/trading" passHref>
-            <div className='px-4'>Win</div>
+            <div className='px-4 py-3 mx-1 text-title font-medium hover:bg-lightBg rounded'>Win</div>
           </NextLink>
 
           <NextLink href="/rewards" passHref>
-            <RainbowText className='px-4'>Rewards</RainbowText>
+            <RainbowText className='px-4 py-3 mx-1 text-title font-medium hover:bg-lightBg rounded'>Rewards</RainbowText>
           </NextLink>
         </div>
       </div>
