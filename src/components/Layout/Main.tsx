@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from '../Nav';
 
 export interface LayoutProps {
   children?: any;
@@ -7,7 +8,8 @@ export interface LayoutProps {
 const MainLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <div>{children}</div>
+      <Nav />
+      <main className='px-8'>{children}</main>
     </>
   );
 };

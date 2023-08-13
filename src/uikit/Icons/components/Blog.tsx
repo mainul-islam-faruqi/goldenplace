@@ -1,0 +1,14 @@
+import { Icon, IconProps } from '../Icon';
+
+const Blog = (props: IconProps) => (
+  <Icon {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M22 4H5V26C5 27.1046 5.89543 28 7 28H22.5351C22.1948 27.4117 22 26.7286 22 26V4ZM26 30H7C4.79086 30 3 28.2091 3 26V4C3 2.89543 3.89543 2 5 2H22C23.1046 2 24 2.89543 24 4V16H29.5V26.5C29.5 28.433 27.933 30 26 30ZM24 26C24 27.1046 24.8954 28 26 28C26.8284 28 27.5 27.3284 27.5 26.5V18H24V26ZM7 22H17V20H7V22ZM17 12H7V14H17V12ZM7 8H20V10H7V8ZM20 16H7V18H20V16Z"
+      fill="currentColor"
+    />
+  </Icon>
+);
+
+export default Blog;

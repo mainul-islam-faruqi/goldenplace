@@ -1,0 +1,14 @@
+import { Icon, IconProps } from '../Icon';
+
+const CopyFile = (props: IconProps) => (
+  <Icon {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M5 19H7V5H21V3H7C5.89589 3.0011 5.0011 3.89589 5 5V19ZM20.377 7.578L26.435 13.699C26.7959 14.0671 26.9986 14.5616 27 15.077V28C26.9989 29.1041 26.1041 29.9989 25 30H11C9.89589 29.9989 9.0011 29.1041 9 28V9C9.0011 7.89589 9.89589 7.0011 11 7H18.998C19.5162 7.00167 20.0125 7.20966 20.377 7.578ZM19 9.02999L24.924 15H19V9.02999ZM11 9V28H25.001L25 17H19C17.8959 16.9989 17.0011 16.1041 17 15V9H11Z"
+      fill="currentColor"
+    />
+  </Icon>
+);
+
+export default CopyFile;

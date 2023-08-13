@@ -19,7 +19,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
   onlyNumber = false,
 }) => (
   <div
-    className={`w-full h-12 flex items-center py-2 px-8 transition duration-200 ease-in-out border border-gray-300 relative ${className} line-height-6 p-2 transition duration-200 ease-in-out border-1 border-solid border-gray-300 cursor-text flex items-center rounded-lg border`}
+    className={`w-full h-12 flex items-center transition duration-200 ease-in-out border border-gray-300 relative ${className} line-height-6 transition duration-200 ease-in-out border-0 border-solid border-gray-300 bg-lightBg cursor-text flex items-center rounded-lg border`}
   >
     <Image
       className="absolute w-6 h-6 pointer-events-none left-3"
@@ -33,7 +33,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
       value={searchText}
       onChange={(e) => setSearchText(e.target.value)}
       placeholder={placeholder}
-      className="pl-[41px] w-full bg-white/50 p-6 rounded-3xl flex justify-between"
+      className="pl-[41px] w-full bg-lightBg py-2 focus:outline-none rounded-3xl flex justify-between"
     />
   </div>
 );

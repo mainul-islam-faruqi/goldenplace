@@ -8,9 +8,9 @@ import {
   DrawerCloseButton,
   DrawerBody,
   IconButton,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 // import { useTranslation } from "react-i18next";
-import NextLink from "next/link";
+import NextLink from 'next/link';
 // import { useUser } from "hooks/graphql/user";
 // import { ChevronRightIcon, Button, DownloadIcon } from "uikit";
 // import StaleOrdersActionBar from "views/account/components/StaleOrdersActionBar";
@@ -23,7 +23,7 @@ interface UserMenuProps {
   account: string;
 }
 
-const accountsPath = "/accounts/me";
+const accountsPath = '/accounts/me';
 
 const UserMenu = ({ account }: UserMenuProps) => {
   const { isOpen, onToggle, onClose } = useDisclosure();
@@ -43,7 +43,7 @@ const UserMenu = ({ account }: UserMenuProps) => {
         bgColor="transparent"
         sx={{
           _hover: {
-            bgColor: "transparent",
+            bgColor: 'transparent',
           },
         }}
         onClick={onToggle}
@@ -57,7 +57,13 @@ const UserMenu = ({ account }: UserMenuProps) => {
           <DrawerBody px={0}>
             <Box pt="96px">
               <NextLink href={accountsPath} passHref>
-                <Flex as="a" alignItems="center" cursor="pointer" p={4} onClick={onClose}>
+                <Flex
+                  as="a"
+                  alignItems="center"
+                  cursor="pointer"
+                  p={4}
+                  onClick={onClose}
+                >
                   {/* <AvatarWithUsername
                     src={userQuery.data?.avatar?.image.src}
                     size={32}

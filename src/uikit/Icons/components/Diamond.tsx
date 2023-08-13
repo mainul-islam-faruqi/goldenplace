@@ -1,0 +1,14 @@
+import { Icon, IconProps } from '../Icon';
+
+const Diamond = (props: IconProps) => (
+  <Icon {...props}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M23.5001 4H8.50007L1.71606 13.045L16.0001 29.527L30.2841 13.045L23.5001 4ZM27.0002 12H21.5542L17.8042 6H22.5002L27.0002 12ZM10.3021 14L14.0561 24.23L5.19005 14H10.3021ZM12.4321 14H19.5681L15.9991 23.721L12.4321 14ZM12.8049 12L15.9999 6.88699L19.1959 12H12.8049ZM21.698 14H26.81L17.943 24.231L21.698 14ZM9.50003 6H14.196L10.446 12H5.00003L9.50003 6Z"
+      fill="currentColor"
+    />
+  </Icon>
+);
+
+export default Diamond;

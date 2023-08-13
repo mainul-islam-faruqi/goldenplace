@@ -3,31 +3,34 @@ import MenuItem from './MenuItem';
 import Image from 'next/image';
 import SearchInput from '../Input/SearchInput';
 // import { useWeb3React } from "@web3-react/core";
-import { Flex, Box, FlexProps, Stack, Menu, MenuProps } from "@chakra-ui/react";
+import { Flex, Box, FlexProps, Stack, Menu, MenuProps } from '@chakra-ui/react';
 
 // import { navHeightResponsive } from "uikit/theme/global";
-import { ConnectWalletIconButton, ConnectWalletButton } from "@/components/Buttons/ConnectWalletButton";
+import {
+  ConnectWalletIconButton,
+  ConnectWalletButton,
+} from '@/components/Buttons/ConnectWalletButton';
 // import { LanguageSwitcherButtons } from "components/Buttons/LanguageSwitherButton/LanguageSwitcherButton";
 // import Logo from "./Logo";
-import UserMenu from "./UserMenu";
+import UserMenu from './UserMenu';
 // import { MobileDrawer, LinkList } from "./NavLinks";
 // import { DesktopSearchButton, MobileSearchButton } from "./SearchButton";
 // import { useTranslation } from "next-i18next";
-import { ColorModeButton } from "@/components/Buttons/ColorModeButton";
+import { ColorModeButton } from '@/components/Buttons/ColorModeButton';
 
 // export type NavProps = FlexProps;
 
 const showOnMobileProps = { base: 'block', md: 'none' };
 const showOnDesktopProps = { base: 'none', md: 'block' };
 
-const Header: React.FC = () => {
+const Nav: React.FC = () => {
   // const { account } = useWeb3React();
-  const account = ""
+  const account = '';
   // const { t } = useTranslation();
   const [searchText, setSearchText] = useState('');
 
   return (
-    <div className="flex items-center fixed top-0 left-0 w-full h-20 max-w-full sticky z-10 px-8 justify-between">
+    <nav className="flex items-center fixed top-0 left-0 w-full h-20 max-w-full sticky z-10 px-8 justify-between">
       <Image src="/goldenplace_logo.png" alt="Logo" width="200" height="33" />
       {/* <Logo mx={4} /> */}
 
@@ -48,14 +51,12 @@ const Header: React.FC = () => {
       </div>
 
       <div className="w-32 px-4 mr-4 flex justify-end">
-      <ColorModeButton />
+        <ColorModeButton />
       </div>
 
       <Stack direction="row" spacing={4}>
         <Stack direction="row" spacing={0}>
-          <Box>
-            
-          </Box>
+          <Box></Box>
 
           {/* <Box display={showOnDesktopProps}>
             <LanguageSwitcherButtons variant="ghost" colorScheme="gray" />
@@ -68,7 +69,7 @@ const Header: React.FC = () => {
           <UserMenu account={account} />
         ) : (
           <>
-            <Box display={{ base: "block", lg: "none" }} px={4}>
+            <Box display={{ base: 'block', lg: 'none' }} px={4}>
               <ConnectWalletIconButton />
             </Box>
             {/* <Box display={{ base: "none", lg: "block" }}>
@@ -78,11 +79,11 @@ const Header: React.FC = () => {
         )}
         <Box display={showOnMobileProps} ml={3} px={4}>
           {/* <MobileDrawer /> */}
-         ...
+          ...
         </Box>
       </Stack>
-    </div>
+    </nav>
   );
 };
 
-export default Header;
+export default Nav;

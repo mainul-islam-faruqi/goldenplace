@@ -1,4 +1,4 @@
-import { Icon, IconProps } from "../Icon";
+import { Icon, IconProps } from '../Icon';
 
 const Wallet = (props: IconProps) => (
   <Icon viewBox="0 0 24 24" {...props}>
