@@ -5,8 +5,7 @@ const TopCollections = () => {
   return (
     <section>
       <h1 className="text-4xl leading-3xl text-darkTitle font-semibold text-center pb-4">
-        {' '}
-        Top Collections{' '}
+        Top Collections
       </h1>
       <CollectionTable
         collections={[]}
