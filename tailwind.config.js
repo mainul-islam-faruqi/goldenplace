@@ -18,6 +18,9 @@ module.exports = {
 
     colors: {
       darkTitle: '#251F04',
+      subTitle: '#777369',
+      mainColor: '#CBB26A',
+      hoverColor: '#DBAF5A',
       lightBg: '#F8F4EE',
       body: '#CACCCD',
       deepBlue: '#162435',
