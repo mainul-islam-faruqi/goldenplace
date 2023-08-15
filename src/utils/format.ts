@@ -1,5 +1,5 @@
-import { format } from "date-fns";
-import { ethers, BigNumberish } from "ethers";
+import { format } from 'date-fns';
+import { ethers, BigNumberish } from 'ethers';
 // import { MakerOrderWithSignatureAndHash } from "types/orders";
 // import { OrderFragment } from "./graphql/fragments";
 
@@ -9,7 +9,8 @@ import { ethers, BigNumberish } from "ethers";
  * @param decimals
  * @returns string
  */
-export const fromDecimals = (value: BigNumberish, decimals = 18): string => ethers.formatUnits(value, decimals);
+export const fromDecimals = (value: BigNumberish, decimals = 18): string =>
+  ethers.formatUnits(value, decimals);
 
 /**
  * Reverse fromDecimals
@@ -17,7 +18,8 @@ export const fromDecimals = (value: BigNumberish, decimals = 18): string => ethe
  * @param decimals
  * @returns BigNumber
  */
-export const toDecimals = (value: string, decimals = 18): BigInt => ethers.parseUnits(value, decimals);
+export const toDecimals = (value: string, decimals = 18): BigInt =>
+  ethers.parseUnits(value, decimals);
 
 interface FormatToSignificantOptions {
   decimals?: number;
@@ -46,7 +48,8 @@ export const formatToSignificant = (
   const remainder = bigNumber % powResult;
 
   const value = fromDecimals(bigNumber - remainder, decimals);
-  const strippedValue = value.slice(-2) === ".0" ? value.substring(0, value.length - 2) : value;
+  const strippedValue =
+    value.slice(-2) === '.0' ? value.substring(0, value.length - 2) : value;
 
   // return commify ? ethers.commify(strippedValue) : strippedValue;
   return strippedValue;
@@ -59,8 +62,14 @@ export const formatToSignificant = (
  * @param endLength length after "..."
  * @returns string
  */
-export const formatAddress = (address: string, startLength = 2, endLength = 4): string =>
-  `${address.substring(0, startLength)}...${address.substring(address.length - endLength)}`;
+export const formatAddress = (
+  address: string,
+  startLength = 2,
+  endLength = 4
+): string =>
+  `${address.substring(0, startLength)}...${address.substring(
+    address.length - endLength
+  )}`;
 
 /**
  * Format Number to localeString
@@ -69,16 +78,31 @@ export const formatAddress = (address: string, startLength = 2, endLength = 4): 
  * @param maximumFractionDigits
  * @returns string
  */
-export const formatNumberToLocale = (value: number, minimumFractionDigits = 2, maximumFractionDigits = 2): string =>
-  value.toLocaleString(undefined, { minimumFractionDigits, maximumFractionDigits });
+export const formatNumberToLocale = (
+  value: number,
+  minimumFractionDigits = 2,
+  maximumFractionDigits = 2
+): string =>
+  value.toLocaleString(undefined, {
+    minimumFractionDigits,
+    maximumFractionDigits,
+  });
 
 /**
  * Format USD
  * @param value
  * @returns string
  */
-export const formatUsd = (value: number, minimumFractionDigits = 2, maximumFractionDigits = 2) =>
-  `$${formatNumberToLocale(value, minimumFractionDigits, maximumFractionDigits)}`;
+export const formatUsd = (
+  value: number,
+  minimumFractionDigits = 2,
+  maximumFractionDigits = 2
+) =>
+  `$${formatNumberToLocale(
+    value,
+    minimumFractionDigits,
+    maximumFractionDigits
+  )}`;
 
 /**
  * Format timestamp to date string
@@ -86,8 +110,10 @@ export const formatUsd = (value: number, minimumFractionDigits = 2, maximumFract
  * @param formatToken
  * @returns string
  */
-export const formatTimestampAsDateString = (timestampInMs: number, formatToken = "HH:mm, LLL. d, yyyy") =>
-  format(new Date(timestampInMs), formatToken);
+export const formatTimestampAsDateString = (
+  timestampInMs: number,
+  formatToken = 'HH:mm, LLL. d, yyyy'
+) => format(new Date(timestampInMs), formatToken);
 
 /**
  * Format fees from base 10000 to a %
@@ -126,12 +152,16 @@ export const formatTimestampAsDateString = (timestampInMs: number, formatToken =
 //   return priceAfterFees;
 // };
 
-export const formatCompactNumber = (number: number, locale = "en", maximumSignificantDigits = 2): string => {
-  const parsedLocale = locale === "zh_hans" ? "zh-CN" : locale; // Format locale to BCP 47 language tag
+export const formatCompactNumber = (
+  number: number,
+  locale = 'en',
+  maximumSignificantDigits = 2
+): string => {
+  const parsedLocale = locale === 'zh_hans' ? 'zh-CN' : locale; // Format locale to BCP 47 language tag
 
   return new Intl.NumberFormat(parsedLocale, {
-    notation: "compact",
-    compactDisplay: "short",
+    notation: 'compact',
+    compactDisplay: 'short',
     maximumSignificantDigits,
   }).format(number);
 };
@@ -139,7 +169,8 @@ export const formatCompactNumber = (number: number, locale = "en", maximumSignif
 /**
  * Format an address to username (gross)
  */
-export const formatAddressUsername = (address: string, len = 6) => address.substring(2, len + 2);
+export const formatAddressUsername = (address: string, len = 6) =>
+  address.substring(2, len + 2);
 
 /**
  * Return BigNumberish integer as a 'compact' string

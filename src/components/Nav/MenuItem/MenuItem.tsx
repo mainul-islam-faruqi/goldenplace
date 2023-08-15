@@ -67,8 +67,11 @@ const MenuItems = () => {
             </RainbowText2>
           </NextLink>
           <NextLink href="/rewards" passHref>
-            <RainbowText animate={true} className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded">
-            Categories
+            <RainbowText
+              animate={true}
+              className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded"
+            >
+              Categories
             </RainbowText>
           </NextLink>
         </div>

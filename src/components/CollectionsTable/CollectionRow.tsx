@@ -56,7 +56,7 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
         gridTemplateColumns={gridTemplateColumns}
         py={4}
         borderBottom="1px solid"
-        borderBottomColor="border-01"
+        borderBottomColor="borderColor.100"
         gridColumnGap={2}
         sx={{ _hover: { bg: 'hover-ui' }, _active: { bg: 'onclick-ui' } }}
       >

@@ -6,6 +6,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/uikit/**/*.{js,ts,jsx,tsx,mdx}',
     './src/views/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -21,6 +22,7 @@ module.exports = {
       subTitle: '#777369',
       mainColor: '#CBB26A',
       hoverColor: '#DBAF5A',
+      borderColor: '#E7E0CF',
       lightBg: '#F8F4EE',
       body: '#CACCCD',
       deepBlue: '#162435',
