@@ -9,7 +9,7 @@ const MainLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Nav />
-      <main className='px-8'>{children}</main>
+      <main className="px-8">{children}</main>
     </>
   );
 };

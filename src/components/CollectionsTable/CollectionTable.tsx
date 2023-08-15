@@ -31,7 +31,7 @@ export const CollectionTable = ({
   loadingRowCount = 20,
 }: CollectionTableProps) => {
   // const showMobileVersion = useBreakpointValue({ base: true, md: false });
-  const showMobileVersion = false
+  const showMobileVersion = false;
 
   if (showMobileVersion) {
     if (isLoading) {

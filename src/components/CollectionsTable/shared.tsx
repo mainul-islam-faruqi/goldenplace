@@ -26,7 +26,12 @@ export const gridTemplateColumns =
   '4fr minmax(0, 2fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr)';
 
 const CollectionHeader: React.FC<TextProps> = (props) => (
-  <Text textStyle="detail" color="text-02" {...props} />
+  <Text
+    textStyle="detail"
+    color="text-02"
+    {...props}
+    className="text-subTitle"
+  />
 );
 export const CollectionHeaderRow = () => {
   const { t } = useTranslation();
@@ -35,7 +40,7 @@ export const CollectionHeaderRow = () => {
     <Grid
       gridTemplateColumns={gridTemplateColumns}
       borderBottom="1px solid"
-      borderBottomColor="border-01"
+      borderBottomColor="borderColor.100"
       pb={2}
       gridColumnGap={2}
     >
@@ -77,7 +82,8 @@ export const CollectionRowSkeleton = () => (
   <Grid
     gridTemplateColumns={gridTemplateColumns}
     borderBottom="1px solid"
-    borderBottomColor="border-01"
+    borderBottomColor="borderColor.100"
+    className="border-b border-b-rose-600/.5"
     py={4}
     alignItems="center"
     gridColumnGap={2}
