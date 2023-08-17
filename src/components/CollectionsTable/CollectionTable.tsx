@@ -65,13 +65,24 @@ export const CollectionTable = ({
         </>
       ) : (
         <>
-          {collections.map((collection, index) => (
+            {collections.map((collection, index) => {
+              // name: collection.collection.name;
+              // address: string;
+              // totalSupply: number;
+              // volume: CollectionVolume;
+              // countOwners?: number;
+              // floor: CollectionFloor;
+              // hasRarity: boolean | null;
+              // image_url?: string;
+
+              
+              return (
             <CollectionRow
-              key={collection?.slug}
+              key={collection.collection.top_contracts[0]}
               collection={collection}
               rank={index + 1}
             />
-          ))}
+          )})}
         </>
       )}
     </>

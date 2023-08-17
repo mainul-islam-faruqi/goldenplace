@@ -27,16 +27,19 @@ interface CollectionRowProps {
 }
 
 export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
-  const { address, logo, floor, volume, countOwners, totalSupply } = collection;
-  const { floorPrice, floorChange24h } = floor || {};
+  const { name, image_url, top_contracts, total_quantity, distinct_owner_count, floor_prices } = collection.collection
+  const { volume } = collection
+  const topCollection = {name, image_url, address: top_contracts[0], totalSupply: total_quantity, volume, countOwners: distinct_owner_count, floor: floor_prices[0]?.value}
+  // const { image_url, address, floor, volume, countOwners, totalSupply } = collection;
+  // const { floorPrice, floorChange24h } = floor || {};
   const isListingRewardsEligible = !!collection.points;
   // const osCollectionImagesQuery = useOsCollectionImages(address, {
   //   enabled: !logo,
   // });
   const logoImg = (() => {
-    if (logo) {
-      return logo;
-    }
+    // if (logo) {
+    //   return logo;
+    // }
 
     // if (
     //   osCollectionImagesQuery.isSuccess &&
@@ -67,15 +70,15 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
             </Text>
             <Avatar
               size={40}
-              src={collection?.image_url}
-              address={collection.address}
+              src={image_url}
+              address={topCollection.address}
               mr={2}
               flexShrink={0}
               borderRadius="4px"
             />
             <Text as="span" textStyle="detail" bold>
-              {collection.name}
-              {collection.isVerified && <VerifiedIcon boxSize={4} ml={1} />}
+              {name}
+              {collection.collection.marketplace_pages[0]?.verified && <VerifiedIcon boxSize={4} ml={1} />}
               {isListingRewardsEligible && (
                 <LogoPolygonIcon color="purple.400" boxSize={4} ml={1} />
               )}
@@ -84,42 +87,42 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
         </GridItem>
         <GridItem>
           <Flex alignItems="start" flexDirection="column">
-            {!!floorPrice ? (
-              <Amount amount={formatToSignificant(floorPrice, 4)} />
+            {!!topCollection.floor ? (
+              <Amount amount={formatToSignificant(topCollection.floor, 4)} />
             ) : (
               '-'
             )}
-            {!!floorChange24h && (
+            {/* {!!floorChange24h && (
               <PercentChangeLabel value={floorChange24h} textStyle="helper" />
-            )}
+            )} */}
           </Flex>
         </GridItem>
         <GridItem>
           <AmountVolumeDisplay
-            amount={volume?.volume24h}
-            change={volume?.change24h}
+            amount={volume}
+            change={1}
           />
         </GridItem>
         <GridItem>
-          {volume?.volumeAll ? (
-            <Amount amount={formatToSignificant(volume?.volumeAll, 0)} />
+          {volume ? (
+            <Amount amount={formatToSignificant(volume, 0)} />
           ) : (
             '-'
           )}
         </GridItem>
         <GridItem>
-          {countOwners ? (
+          {topCollection.countOwners ? (
             <Text textStyle="detail" bold>
-              {formatNumberToLocale(countOwners, 0, 0)}
+              {formatNumberToLocale(topCollection.countOwners, 0, 0)}
             </Text>
           ) : (
             '-'
           )}
         </GridItem>
         <GridItem>
-          {totalSupply ? (
+          {topCollection.totalSupply ? (
             <Text textStyle="detail" bold>
-              {formatNumberToLocale(totalSupply, 0, 0)}
+              {formatNumberToLocale(topCollection.totalSupply, 0, 0)}
             </Text>
           ) : (
             '-'

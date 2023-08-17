@@ -3,10 +3,10 @@ import HomeView from '@/views/home';
 import type { ReactElement } from 'react';
 import MainLayout from '@/components/Layout/Main';
 import type { NextPageWithLayout } from './_app';
-import { getNFTCollections } from "@/utils/api/NftCollection";
+import { getNFTCollections, getTopNFTCollections } from "@/utils/api/NftCollection";
 
-const Page: NextPageWithLayout = ({collections}:any) => {
-  return <HomeView collections={collections} />;
+const Page: NextPageWithLayout = ({topCollections}:any) => {
+  return <HomeView topCollections={topCollections} />;
 };
 
 Page.getLayout = function getLayout(page: ReactElement) {
@@ -16,23 +16,33 @@ Page.getLayout = function getLayout(page: ReactElement) {
 
 export const getStaticProps: GetStaticProps = async () => {
   // const topCollections = await getCollectionsBase(COLLECTIONS_PARAMS, headers);
-  console.log('getStaticProps is called');
-  const collections = await getNFTCollections((err: any, data: any) => {
+  
+  const topCollections = await getTopNFTCollections((err: any, data: any) => {
     if (err) return;
-    return data?.collections.filter((collection: { image_url: null; }) => collection.image_url !== null)
+    // console.log(data)
+    return data?.collections.slice(0, 20)
+      //.filter((collection: { image_url: null; }) => collection.image_url !== null)
   })
+  console.log("🚀 ~ file: index.tsx:24 ~ topCollections ~ topCollections:", topCollections.length)
+  console.log('getStaticProps is called');
+  // const collections = await getNFTCollections((err: any, data: any) => {
+  //   if (err) return;
+  //   // return data?.collections.filter((collection: { image_url: null; }) => collection.image_url !== null)
+  // })
+
+  
 
   try {
     return {
       props: {
-        collections,
+        topCollections,
       },
       revalidate: 600, // 10 mins
     };
   } catch {
     return {
       props: {
-        collections
+        topCollections
       },
     };
   }
