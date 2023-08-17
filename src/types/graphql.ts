@@ -45,6 +45,8 @@ export interface CollectionBase {
   hasRarity: boolean | null;
   watchlists?: BigNumberish;
   isInMainWatchlist: boolean;
+  image_url?: string;
+  slug?: string;
 }
 
 /**

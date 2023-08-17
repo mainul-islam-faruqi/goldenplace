@@ -67,7 +67,7 @@ export const CollectionTable = ({
         <>
           {collections.map((collection, index) => (
             <CollectionRow
-              key={collection.address}
+              key={collection?.slug}
               collection={collection}
               rank={index + 1}
             />
