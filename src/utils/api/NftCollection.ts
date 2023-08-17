@@ -17,21 +17,28 @@ const getReq = async (url:string, body:any, cb:any) => {
   })
 }
 
+const getSimpleHashReq = async (url: string, cb: any) => {
+  const config = {
+    headers: {
+      Accept: 'application/json', 
+      'X-API-KEY': `${process.env.SIMPLEHASH_API_KEY}`,
+    },
+  }
+
+  const response = await axios.get(url, config)
+  return cb(null, response.data)
+}
+
 const getOpenSeaReq = async (url:string, cb:any) => {
   const config = {
     headers: {
       Accept: 'application/json', 
       'X-API-KEY': `${process.env.OPENSEA_API_KEY}`,
     },
-    
   }
 
   const response = await axios.get(url, config)
   return cb(null, response.data)
-  // .then(data => {
-  //   console.log(data.data)
-  //   cb(null, data.data)
-  // })
 }
 
 
@@ -42,11 +49,7 @@ export const getTrendingNFTCollections = (cb:any) => {
 }
 
 export const getTopNFTCollections = (cb:any) => {
-  const body = new URLSearchParams({
-    'include': 'insights',
-    'sort': '-insights.volume&-insights.trades&-insights.unique_buyers&-insights.max_price'
-  })
-  getReq(`https://docs.rarify.tech/data/contracts`, body, cb);
+  return getSimpleHashReq(`https://api.simplehash.com/api/v0/nfts/collections/top?time_period=1d&chains=ethereum&metric_type=top`, cb);
 }
 
 export const getNFTCollections = (cb: any) => {

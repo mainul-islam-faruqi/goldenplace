@@ -2,6 +2,61 @@ import { BigNumberish } from 'ethers';
 import { MakerOrderWithSignatureAndHash } from './orders';
 import { TokenStandard } from './config';
 
+type PaymentToken = {
+  payment_token_id: string;
+  name: string;
+  symbol: string;
+  address: string | null;
+  decimals: number;
+};
+
+type MarketplacePage = {
+  marketplace_id: string;
+  marketplace_name: string;
+  marketplace_collection_id: string;
+  collection_url: string;
+  verified: boolean;
+};
+
+type FloorPrice = {
+  marketplace_id: string;
+  marketplace_name: string;
+  value: number;
+  payment_token: PaymentToken;
+};
+
+type TopBid = {
+  marketplace_id: string;
+  marketplace_name: string;
+  value: number;
+  payment_token: PaymentToken;
+};
+
+export type TopCollection = {
+  collection_id: string;
+  name: string;
+  description: string;
+  image_url: string;
+  banner_image_url: string;
+  category: string | null;
+  is_nsfw: boolean;
+  external_url: string;
+  twitter_username: string;
+  discord_url: string;
+  instagram_username: string | null;
+  medium_username: string | null;
+  telegram_url: string | null;
+  marketplace_pages: MarketplacePage[];
+  metaplex_mint: string | null;
+  metaplex_first_verified_creator: string | null;
+  floor_prices: FloorPrice[];
+  top_bids: TopBid[];
+  distinct_owner_count: number;
+  distinct_nft_count: number;
+  total_quantity: number;
+  chains: string[];
+  top_contracts: string[];
+};
 export interface CollectionOwner {
   address: string;
   isVerified?: boolean;
@@ -30,6 +85,7 @@ export interface CollectionFloor {
 
 // Used for most minimal Collection displays i.e. within collection tables
 export interface CollectionBase {
+  collection: TopCollection
   name: string;
   address: string;
   type: TokenStandard;
@@ -38,7 +94,7 @@ export interface CollectionBase {
   isVerified?: boolean;
   isExplicit?: boolean;
   points: BigNumberish | null;
-  volume: CollectionVolume;
+  volume: BigNumberish;
   countOwners?: number;
   countWatchlists: number;
   floor: CollectionFloor;
