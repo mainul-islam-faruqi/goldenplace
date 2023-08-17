@@ -67,7 +67,7 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
             </Text>
             <Avatar
               size={40}
-              src={logoImg?.src}
+              src={collection?.image_url}
               address={collection.address}
               mr={2}
               flexShrink={0}
@@ -96,13 +96,13 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
         </GridItem>
         <GridItem>
           <AmountVolumeDisplay
-            amount={volume.volume24h}
-            change={volume.change24h}
+            amount={volume?.volume24h}
+            change={volume?.change24h}
           />
         </GridItem>
         <GridItem>
-          {volume.volumeAll ? (
-            <Amount amount={formatToSignificant(volume.volumeAll, 0)} />
+          {volume?.volumeAll ? (
+            <Amount amount={formatToSignificant(volume?.volumeAll, 0)} />
           ) : (
             '-'
           )}
