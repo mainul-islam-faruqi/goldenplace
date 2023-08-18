@@ -34,6 +34,7 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
     total_quantity,
     distinct_owner_count,
     floor_prices,
+    chains,
   } = collection.collection;
   const { volume } = collection;
   const topCollection = {
@@ -116,9 +117,9 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
             )} */}
           </Flex>
         </GridItem>
-        <GridItem>
+        {/* <GridItem>
           <AmountVolumeDisplay amount={volume} change={1} />
-        </GridItem>
+        </GridItem> */}
         <GridItem>
           {volume ? <Amount amount={formatToSignificant(volume, 0)} /> : '-'}
         </GridItem>
@@ -139,6 +140,9 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
           ) : (
             '-'
           )}
+        </GridItem>
+        <GridItem>
+          <Text> {chains} </Text>
         </GridItem>
       </Grid>
     </Link>
