@@ -50,33 +50,30 @@ const MenuItems = () => {
       <DesktopNextLink href="/collections">{t("Collections")}</DesktopNextLink> */}
       <div>
         <div className="flex items-center h-12 whitespace-nowrap text-text-02 hover:bg-ui-01">
-          <div className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded">
-            <NextLink href="/rewards" passHref>
+          <NextLink href="/rewards" passHref>
+            <div className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded">
               Collections
-            </NextLink>
-          </div>
-
-
-          <div className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded">
-            <NextLink href="/rewards/trading" passHref>
-              Win</NextLink>
-          </div>
-
+            </div>
+          </NextLink>
+          <NextLink href="/rewards/trading" passHref>
+            <div className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded">
+              Win
+            </div>
+          </NextLink>
 
           {/* <NextLink href="/rewards" passHref>
             <RainbowText2 className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded">
               Rewards
             </RainbowText2>
           </NextLink> */}
-
-          <RainbowText
-            animate={true}
-
-          >
-            <div className="px-4 py-3 mx-1 text-darkTitle font-medium rounded"><NextLink href="/rewards" passHref>Rewards</NextLink></div>
-
-          </RainbowText>
-
+          <NextLink href="/rewards" passHref>
+            <RainbowText
+              animate={true}
+              className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded"
+            >
+              Rewards
+            </RainbowText>
+          </NextLink>
         </div>
       </div>
     </div>

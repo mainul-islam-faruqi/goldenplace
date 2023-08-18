@@ -27,9 +27,24 @@ interface CollectionRowProps {
 }
 
 export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
-  const { name, image_url, top_contracts, total_quantity, distinct_owner_count, floor_prices } = collection.collection
-  const { volume } = collection
-  const topCollection = {name, image_url, address: top_contracts[0], totalSupply: total_quantity, volume, countOwners: distinct_owner_count, floor: floor_prices[0]?.value}
+  const {
+    name,
+    image_url,
+    top_contracts,
+    total_quantity,
+    distinct_owner_count,
+    floor_prices,
+  } = collection.collection;
+  const { volume } = collection;
+  const topCollection = {
+    name,
+    image_url,
+    address: top_contracts[0],
+    totalSupply: total_quantity,
+    volume,
+    countOwners: distinct_owner_count,
+    floor: floor_prices[0]?.value,
+  };
   // const { image_url, address, floor, volume, countOwners, totalSupply } = collection;
   // const { floorPrice, floorChange24h } = floor || {};
   const isListingRewardsEligible = !!collection.points;
@@ -52,7 +67,10 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
   })();
 
   return (
-    <Link href={`/collections/${topCollection.address.replace('ethereum.', '')}`} passHref>
+    <Link
+      href={`/collections/${topCollection.address.replace('ethereum.', '')}`}
+      passHref
+    >
       <Grid
         alignItems="center"
         gridTemplateColumns={gridTemplateColumns}
@@ -77,7 +95,9 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
             />
             <Text as="span" textStyle="detail" bold>
               {name}
-              {collection.collection.marketplace_pages[0]?.verified && <VerifiedIcon boxSize={4} ml={1} />}
+              {collection.collection.marketplace_pages[0]?.verified && (
+                <VerifiedIcon boxSize={4} ml={1} />
+              )}
               {isListingRewardsEligible && (
                 <LogoPolygonIcon color="purple.400" boxSize={4} ml={1} />
               )}
@@ -97,17 +117,10 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
           </Flex>
         </GridItem>
         <GridItem>
-          <AmountVolumeDisplay
-            amount={volume}
-            change={1}
-          />
+          <AmountVolumeDisplay amount={volume} change={1} />
         </GridItem>
         <GridItem>
-          {volume ? (
-            <Amount amount={formatToSignificant(volume, 0)} />
-          ) : (
-            '-'
-          )}
+          {volume ? <Amount amount={formatToSignificant(volume, 0)} /> : '-'}
         </GridItem>
         <GridItem>
           {topCollection.countOwners ? (

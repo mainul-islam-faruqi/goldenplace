@@ -65,24 +65,24 @@ export const CollectionTable = ({
         </>
       ) : (
         <>
-            {collections.map((collection, index) => {
-              // name: collection.collection.name;
-              // address: string;
-              // totalSupply: number;
-              // volume: CollectionVolume;
-              // countOwners?: number;
-              // floor: CollectionFloor;
-              // hasRarity: boolean | null;
-              // image_url?: string;
+          {collections.map((collection, index) => {
+            // name: collection.collection.name;
+            // address: string;
+            // totalSupply: number;
+            // volume: CollectionVolume;
+            // countOwners?: number;
+            // floor: CollectionFloor;
+            // hasRarity: boolean | null;
+            // image_url?: string;
 
-              
-              return (
-            <CollectionRow
-              key={collection.collection.top_contracts[0]}
-              collection={collection}
-              rank={index + 1}
-            />
-          )})}
+            return (
+              <CollectionRow
+                key={collection.collection.top_contracts[0]}
+                collection={collection}
+                rank={index + 1}
+              />
+            );
+          })}
         </>
       )}
     </>
