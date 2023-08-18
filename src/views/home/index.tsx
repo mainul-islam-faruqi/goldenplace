@@ -6,8 +6,7 @@ interface HomeViewProps {
   topCollections: any; // Adjust the type as needed
 }
 
-const HomeView: React.FC<HomeViewProps> = ({topCollections}) => {  
-  
+const HomeView: React.FC<HomeViewProps> = ({ topCollections }) => {
   return (
     <>
       <Hero />

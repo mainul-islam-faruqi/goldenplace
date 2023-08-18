@@ -56,8 +56,6 @@ const Nav: React.FC = () => {
 
       <Stack direction="row" spacing={4}>
         <Stack direction="row" spacing={0}>
-          <Box></Box>
-
           {/* <Box display={showOnDesktopProps}>
             <LanguageSwitcherButtons variant="ghost" colorScheme="gray" />
           </Box> */}

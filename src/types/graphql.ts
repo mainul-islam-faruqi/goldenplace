@@ -85,7 +85,7 @@ export interface CollectionFloor {
 
 // Used for most minimal Collection displays i.e. within collection tables
 export interface CollectionBase {
-  collection: TopCollection
+  collection: TopCollection;
   name: string;
   address: string;
   type: TokenStandard;

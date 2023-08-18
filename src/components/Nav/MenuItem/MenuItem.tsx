@@ -61,17 +61,17 @@ const MenuItems = () => {
             </div>
           </NextLink>
 
-          <NextLink href="/rewards" passHref>
+          {/* <NextLink href="/rewards" passHref>
             <RainbowText2 className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded">
               Rewards
             </RainbowText2>
-          </NextLink>
+          </NextLink> */}
           <NextLink href="/rewards" passHref>
             <RainbowText
               animate={true}
               className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded"
             >
-              Categories
+              Rewards
             </RainbowText>
           </NextLink>
         </div>

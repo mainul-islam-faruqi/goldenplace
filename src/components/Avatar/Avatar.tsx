@@ -48,7 +48,7 @@ export const Avatar: React.FC<AvatarProps> = ({
             <Image
               src={src}
               alt={address}
-              objectFit="cover"
+              // objectFit="cover"
               width={size}
               height={size}
               onLoadingComplete={() => setIsImageLoaded(true)}
