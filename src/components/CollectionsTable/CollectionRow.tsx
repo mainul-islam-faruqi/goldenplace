@@ -52,9 +52,8 @@ export const CollectionRow = ({ collection, rank }: CollectionRowProps) => {
   })();
 
   return (
-    <Link href={`/collections/${collection.address}`} passHref>
+    <Link href={`/collections/${topCollection.address.replace('ethereum.', '')}`} passHref>
       <Grid
-        as="a"
         alignItems="center"
         gridTemplateColumns={gridTemplateColumns}
         py={4}

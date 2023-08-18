@@ -19,12 +19,8 @@ export const getStaticProps: GetStaticProps = async () => {
   
   const topCollections = await getTopNFTCollections((err: any, data: any) => {
     if (err) return;
-    // console.log(data)
     return data?.collections.slice(0, 20)
-      //.filter((collection: { image_url: null; }) => collection.image_url !== null)
   })
-  console.log("🚀 ~ file: index.tsx:24 ~ topCollections ~ topCollections:", topCollections.length)
-  console.log('getStaticProps is called');
   // const collections = await getNFTCollections((err: any, data: any) => {
   //   if (err) return;
   //   // return data?.collections.filter((collection: { image_url: null; }) => collection.image_url !== null)
@@ -42,7 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
   } catch {
     return {
       props: {
-        topCollections
+        topCollections : []
       },
     };
   }
