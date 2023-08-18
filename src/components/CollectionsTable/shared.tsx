@@ -46,10 +46,11 @@ export const CollectionHeaderRow = () => {
     >
       <CollectionHeader>{t('Collection')}</CollectionHeader>
       <CollectionHeader>{t('Floor')}</CollectionHeader>
-      <CollectionHeader>{t('24h Vol')}</CollectionHeader>
+      {/* <CollectionHeader>{t('24h Vol')}</CollectionHeader> */}
       <CollectionHeader>{t('Total Vol')}</CollectionHeader>
       <CollectionHeader>{t('Owners')}</CollectionHeader>
       <CollectionHeader>{t('Items')}</CollectionHeader>
+      <CollectionHeader>{t('Chain')}</CollectionHeader>
     </Grid>
   );
 };
