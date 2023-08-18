@@ -30,7 +30,7 @@ const Nav: React.FC = () => {
   const [searchText, setSearchText] = useState('');
 
   return (
-    <nav className="flex items-center fixed top-0 left-0 w-full h-20 max-w-full sticky z-10 px-8 justify-between">
+    <nav className="flex items-center fixed top-0 left-0 w-full h-20 max-w-full sticky z-10 px-8 justify-between" style={{backgroundColor: 'white'}}>
       <Image src="/goldenplace_logo.png" alt="Logo" width="200" height="33" />
       {/* <Logo mx={4} /> */}
 
