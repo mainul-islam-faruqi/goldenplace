@@ -110,7 +110,7 @@ import { Button, ButtonProps } from './Button';
 // import { SectionPlaceholder } from "./Placeholder/SectionPlaceholder"
 // import { Step, getStepStatus} from "./Step/Step"
 // import { Switch } from "./Switch"
-import { Text, TextProps, RainbowText } from './Text/Text';
+// import { TextProps, RainbowText } from './Text/Text';
 // import { TooltipText } from "./Text/Text"
 
 export {
@@ -222,37 +222,38 @@ export {
   //     Popover,
   //     Checkbox,
   //     CheckboxCard,
-  RainbowText,
+  // RainbowText,
   //     SectionLoader,
   //     SectionPlaceholder,
   //     Step,
       // Switch,
   //     Switcher,
   //     TooltipText,
-  Text,
+  // Text,
 };
 
-export type { ButtonProps, TextProps };
+export type { ButtonProps };
   
 // export * from "./Alert";
 // export * from "./assets";
 export * from "./Badge";
 // export * from "./Banner";
 export * from "./Button";
-// export * from "./ButtonGroup";
+export * from "./ButtonGroup";
 // export * from "./Checkbox";
 // export * from "./Datepicker";
-// export * from "./Icons";
+export * from "./Icons";
 // export * from "./Input";
 // export * from "./Link";
 // export * from "./Loader";
+export * from "./Menu";
 // export * from "./Modal";
 // export * from "./Popover";
-// export * from "./Placeholder";
+export * from "./Placeholder";
 // export * from "./Step";
 export * from "./Switch";
 // export * from "./Tag";
-// export * from "./Text";
+export * from "./Text";
 // export * from "./Textarea";
 // export * from "./theme";
 

@@ -45,6 +45,14 @@ export const ModalHeading: React.FC<TextProps> = ({ children, ...props }) => {
   );
 };
 
+export const TextInput: React.FC<TextProps> = ({ children, ...props }) => {
+  return (
+    <Text bold textStyle={{ base: 'heading-05', md: 'heading-04' }} {...props}>
+      {children}
+    </Text>
+  );
+};
+
 export interface RainbowTextProps extends TextProps {
   animate?: boolean;
   bg?: string;
