@@ -50,7 +50,7 @@ const MenuItems = () => {
       <DesktopNextLink href="/collections">{t("Collections")}</DesktopNextLink> */}
       <div>
         <div className="flex items-center h-12 whitespace-nowrap text-text-02 hover:bg-ui-01">
-          <NextLink href="/rewards" passHref>
+          <NextLink href="/collections" passHref>
             <div className="px-4 py-3 mx-1 text-darkTitle font-medium hover:bg-lightBg rounded">
               Collections
             </div>

@@ -87,7 +87,7 @@ import WarningFilledIcon from './Icons/components/WarningFilled';
 import WethIcon from './Icons/components/Weth';
 import WethHalfIcon from './Icons/components/WethHalf';
 // import { Alert } from "./Alert/Alert"
-// import { Badge } from "./Badge/Badge"
+import { Badge } from "./Badge"
 import { Button, ButtonProps } from './Button';
 // import { ButtonProps } from "./Button"
 // import { ButtonToggle } from "./ButtonGroup/ButtonToggle"
@@ -109,8 +109,8 @@ import { Button, ButtonProps } from './Button';
 // import CheckboxCard from "./Checkbox/CheckboxCard"
 // import { SectionPlaceholder } from "./Placeholder/SectionPlaceholder"
 // import { Step, getStepStatus} from "./Step/Step"
-// import Switch from "./Switch/Switch"
-import { Text, TextProps, RainbowText } from './Text/Text';
+// import { Switch } from "./Switch"
+// import { TextProps, RainbowText } from './Text/Text';
 // import { TooltipText } from "./Text/Text"
 
 export {
@@ -203,7 +203,7 @@ export {
   WethIcon,
   WethHalfIcon,
   //     Alert,
-  //     Badge,
+      Badge,
   Button,
   //     ButtonToggle,
   //     ButtonGroup,
@@ -222,14 +222,38 @@ export {
   //     Popover,
   //     Checkbox,
   //     CheckboxCard,
-  RainbowText,
+  // RainbowText,
   //     SectionLoader,
   //     SectionPlaceholder,
   //     Step,
-  //     Switch,
+      // Switch,
   //     Switcher,
   //     TooltipText,
-  Text,
+  // Text,
 };
 
-export type { ButtonProps, TextProps };
+export type { ButtonProps };
+  
+// export * from "./Alert";
+// export * from "./assets";
+export * from "./Badge";
+// export * from "./Banner";
+export * from "./Button";
+export * from "./ButtonGroup";
+// export * from "./Checkbox";
+// export * from "./Datepicker";
+export * from "./Icons";
+// export * from "./Input";
+// export * from "./Link";
+// export * from "./Loader";
+export * from "./Menu";
+// export * from "./Modal";
+// export * from "./Popover";
+export * from "./Placeholder";
+// export * from "./Step";
+export * from "./Switch";
+// export * from "./Tag";
+export * from "./Text";
+// export * from "./Textarea";
+// export * from "./theme";
+
