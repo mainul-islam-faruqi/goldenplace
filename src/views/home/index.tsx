@@ -72,14 +72,13 @@ const HomeView: React.FC<HomeViewProps> = ({ topCollections }) => {
               </Box>
               <Flex mt={12}>
                 <NextLink href={`/accounts/me`} passHref>
-                  <Button id="home-view-list-an-nft" as="a" mr={2}>
+                  <Button id="home-view-list-an-nft" mr={2}>
                     {t('List an NFT')}
                   </Button>
                 </NextLink>
                 <NextLink href="/explore" passHref>
                   <Button
                     id="home-view-explore-nfts"
-                    as="a"
                     variant="outline"
                     colorScheme="gray"
                   >
