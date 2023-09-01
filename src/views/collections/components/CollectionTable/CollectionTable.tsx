@@ -21,7 +21,6 @@ export const CollectionTable = ({
   loadingRowCount = 10,
   timeframe,
 }: CollectionTableProps) => {
-  console.log(collections)
   const { t } = useTranslation();
 
   const renderBody = () => {
