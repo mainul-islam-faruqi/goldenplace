@@ -27,7 +27,7 @@ export const TimeFrame = ({ timeFrame, setTimeframe, sortLabel, dataIdPrefix }: 
   const isMaxDisabled = sortLabel !== VOL_DESC_LABEL;
 
   return (
-    <ButtonToggle width="100%" display="flex">
+    <ButtonToggle width="100%" display="flex" colorScheme="yellow" >
       <Button
         variant={getVariant(isDay)}
         size="md"
@@ -35,6 +35,7 @@ export const TimeFrame = ({ timeFrame, setTimeframe, sortLabel, dataIdPrefix }: 
         onClick={handleTimeframeClick(CollectionTimeframe.DAY)}
         flex={1}
         data-id={dataIdPrefix ? `${dataIdPrefix}-24h` : ""}
+        borderColor="borderColor.500"
       >
         {t("24h")}
       </Button>
@@ -45,6 +46,7 @@ export const TimeFrame = ({ timeFrame, setTimeframe, sortLabel, dataIdPrefix }: 
         onClick={handleTimeframeClick(CollectionTimeframe.WEEK)}
         flex={1}
         data-id={dataIdPrefix ? `${dataIdPrefix}-7d` : ""}
+        borderColor="borderColor.500"
       >
         {t("7d")}
       </Button>
@@ -55,6 +57,7 @@ export const TimeFrame = ({ timeFrame, setTimeframe, sortLabel, dataIdPrefix }: 
         onClick={handleTimeframeClick(CollectionTimeframe.MONTH)}
         flex={1}
         data-id={dataIdPrefix ? `${dataIdPrefix}-30d` : ""}
+        borderColor="borderColor.500"
       >
         {t("30d")}
       </Button>
@@ -66,6 +69,7 @@ export const TimeFrame = ({ timeFrame, setTimeframe, sortLabel, dataIdPrefix }: 
         flex={1}
         disabled={isMaxDisabled}
         data-id={dataIdPrefix ? `${dataIdPrefix}-max` : ""}
+        borderColor="borderColor.500"
       >
         {t("Max")}
       </Button>

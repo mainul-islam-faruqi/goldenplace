@@ -23,6 +23,11 @@ module.exports = {
       mainColor: '#CBB26A',
       hoverColor: '#DBAF5A',
       borderColor: '#E7E0CF',
+      borderColor: {
+        100: '#E7E0CF',
+        400: '#F8CA0A',
+        500: '#E7A634',
+      },
       lightBg: '#F8F4EE',
       body: '#CACCCD',
       deepBlue: '#162435',

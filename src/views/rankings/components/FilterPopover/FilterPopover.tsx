@@ -24,7 +24,7 @@ export const FilterPopover: FC<PropsWithChildren<FilterPopoverProps>> = ({ child
   return (
     <Popover trigger="click" arrowSize={16} gutter={20} isLazy>
       {({ isOpen, onClose }) => {
-        const icon = isOpen ? <CloseIcon /> : <FilterIcon />;
+        const icon = isOpen ? <CloseIcon boxSize={6}/> : <FilterIcon boxSize={6} />;
         const displayLeftIcon = isMobile ? undefined : icon;
 
         const delayedClose = () => {
@@ -36,7 +36,7 @@ export const FilterPopover: FC<PropsWithChildren<FilterPopoverProps>> = ({ child
         return (
           <>
             <PopoverTrigger>
-              <Button variant="outline" colorScheme="gray" leftIcon={displayLeftIcon}>
+              <Button variant="outline" colorScheme="gray" leftIcon={displayLeftIcon} borderColor="borderColor.500" color="textColor.500" _hover={{backgroundColor:"backgroundColor.50"}}>
                 {isMobile ? icon : t("Filter")}
                 {activeFilterCount > 0 && (
                   <Badge colorScheme="gray" ml={1}>

@@ -12,15 +12,15 @@ export const RankingsHeader = ({ tabIndex }: { tabIndex: number }) => {
   return (
     <Box bgGradient={bgGradient}>
       <Container>
-        <Text as="h1" textStyle="display-01" bold py={12}>
+        <Text as="h1" textStyle="display-01" bold py={12} className="text-4xl text-darkTitle font-semibold">
           {t("Rankings")}
         </Text>
         <Tabs variant="line" index={tabIndex} isLazy>
-          <TabList>
-            <Tab as={NextLink} href="/collections">
+          <TabList borderColor="borderColor.100">
+            <Tab as={NextLink} href="/collections" _selected={{borderColor: "borderColor.500", color:"textColor.500", fontWeight: "700"}}>
               {t("All Collections")}
             </Tab>
-            <Tab as={NextLink} href="/watchlists/me" data-id="my-watchlists-tab">
+            <Tab as={NextLink} href="/watchlists/me" data-id="my-watchlists-tab" _selected={{borderColor: "borderColor.500"}}>
               {t("My Watchlists")}
             </Tab>
           </TabList>

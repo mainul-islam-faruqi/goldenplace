@@ -6,6 +6,10 @@ import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
 const colors = {
+  backgroundColor: {
+    50: '#F8F4EE',
+    100: '#DBAF5A',
+  },
   brand: {
     900: '#1a365d',
     800: '#153e75',
@@ -13,7 +17,13 @@ const colors = {
   },
   borderColor: {
     100: '#E7E0CF',
+    400: '#F8CA0A',
+    500: '#E7A634',
   },
+  textColor: {
+    500: '#E7A634',
+  },
+  
 };
 
 export const theme = extendTheme({ colors });

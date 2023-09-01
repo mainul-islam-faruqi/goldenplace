@@ -30,7 +30,7 @@ export const MenuButton = forwardRef<MenuButtonProps, "div">(
         ) : (
           <ChakraMenuButton {...defaultProps} alignItems="unset" {...props}>
             <Flex alignItems="center" justifyContent="space-between" flex={1}>
-              <>{children} <Chevron ml={2} direction="down" isRotated={isOpen} {...chevronIconProps} /></>
+              <>{children} <Chevron boxSize={6} color="textColor.500" ml={2} direction="down" isRotated={isOpen} {...chevronIconProps} /></>
             </Flex>
           </ChakraMenuButton>
         )}
