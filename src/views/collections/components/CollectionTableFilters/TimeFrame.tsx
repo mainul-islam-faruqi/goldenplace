@@ -27,7 +27,7 @@ export const TimeFrame = ({ timeFrame, setTimeframe, sortLabel, dataIdPrefix }: 
   const isMaxDisabled = sortLabel !== VOL_DESC_LABEL;
 
   return (
-    <ButtonToggle width="100%" display="flex" colorScheme="yellow" >
+    <ButtonToggle width="100%" display="flex" colorScheme="yellow">
       <Button
         variant={getVariant(isDay)}
         size="md"
